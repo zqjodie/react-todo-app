@@ -5,11 +5,11 @@ var Todo = require('Todo');
 var TodoList = React.createClass({
 
   render: function () {
-    var {todos} = this.props;
-    var renderTodos = () => {
+    var {todos, onToggle} = this.props;
+    var renderTodos = function () {
       return todos.map(function(todo) {
         return (
-          <Todo key={todo.id} {...todo}/>
+          <Todo key={todo.id} {...todo} onToggle={onToggle}/>
         );
       });
     };

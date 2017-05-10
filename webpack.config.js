@@ -23,7 +23,8 @@ module.exports = {
     root: __dirname,
     modulesDirectories:  [
       'node_modules',
-      './app/components'
+      './app/components',
+      './app/api'
     ],
     alias: {
       Main: 'app/components/Main.jsx',
@@ -39,7 +40,7 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_componnets)/
+        exclude: /(node_modules|bower_components)/
       }
     ]
   },
